@@ -3,21 +3,23 @@
  <head>
   <title> New Document </title>
   <script type="text/javascript">
- function fact(num)
- {
-    var x=parseInt(num);
-    //alert(x+1);
-    if(x>0)
-        x=x* fact(x-1);
-    alert(x);
- }
+ function fact(x) {
+   if(x==0) {
+      return 1;
+   }
+   return x * fact(x-1);
+}
+
+function run(number) {
+    alert(fact(parseInt(number, 10)));
+}
   </script>
  </head>
 
  <body>
  <form name="f1">
   Enter the Number  :<input type="text" length="8" name="txt1"><br>
-  <input type="button" value="Find factiorial" onclick="fact(txt1.value)">
+  <input type="button" value="Find factiorial" onclick="run(txt1.value)">
   </form>
  </body>
 </html>
